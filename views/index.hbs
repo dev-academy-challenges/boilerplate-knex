@@ -4,6 +4,10 @@
     <title>EDA Phase 1 Express Boilerplate</title>
   </head>
   <body>
-    {{ hi }}
+    <ul>
+    {{#each users}}
+      <li>{{name}} ({{email}})</li>
+    {{/each}}
+    </ul>
   </body>
 </html>
