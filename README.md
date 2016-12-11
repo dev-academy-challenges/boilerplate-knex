@@ -8,9 +8,9 @@ Phase 1 boilerplate project with:
  - Express Handlebars
  - body-parser
  - tape
- - tap-spec
- - Node Inspector
- - Nodemon
+ - tap-diff
+ - devtool
+ - nodemon
 
 
 ## Install
@@ -19,5 +19,7 @@ Phase 1 boilerplate project with:
 npm install
 npm run knex migrate:latest
 npm run knex seed:run
-npm start
+npm run dev
 ```
+
+Be sure to check out the other npm scripts too.

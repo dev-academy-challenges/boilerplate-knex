@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "knex": "knex",
-    "start": "node-inspector --web-port=8888 & nodemon --debug index.js",
-    "test": "tape 'tests/**/*.test.js' | tap-spec"
+    "dev": "nodemon index",
+    "start": "node index",
+    "debug": "devtool index --watch",
+    "test": "tape 'tests/**/*.test.js' | tap-diff"
   },
   "repository": {
     "type": "git",
@@ -23,16 +25,16 @@
   },
   "homepage": "https://github.com/dev-academy-challenges/boilerplate-knex#readme",
   "devDependencies": {
-    "node-inspector": "^0.12.8",
-    "nodemon": "^1.10.0",
-    "sqlite3": "^3.1.4",
-    "tap-spec": "^4.1.1",
-    "tape": "^4.6.0"
+    "devtool": "^2.3.0",
+    "nodemon": "^1.11.0",
+    "sqlite3": "^3.1.8",
+    "tap-diff": "^0.1.1",
+    "tape": "^4.6.3"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
-    "knex": "^0.11.9"
+    "knex": "^0.11.10"
   }
 }
