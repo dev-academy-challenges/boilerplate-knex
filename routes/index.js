@@ -1,6 +1,6 @@
 var express = require('express')
 
-var db = require('./db')
+var db = require('../db')
 
 module.exports = {
   get: get
