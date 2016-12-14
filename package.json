@@ -28,9 +28,7 @@
     "ava": "^0.17.0",
     "devtool": "^2.3.0",
     "nodemon": "^1.11.0",
-    "sqlite3": "^3.1.8",
-    "tap-diff": "^0.1.1",
-    "tape": "^4.6.3"
+    "sqlite3": "^3.1.8"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
