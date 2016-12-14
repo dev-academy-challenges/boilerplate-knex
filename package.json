@@ -8,7 +8,7 @@
     "dev": "nodemon index",
     "start": "node index",
     "debug": "devtool --watch index ",
-    "test": "ava 'tests/**/*.test.js'"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
