@@ -7,9 +7,8 @@ Phase 1 boilerplate project with:
  - SQLite3
  - Express Handlebars
  - body-parser
- - tape
- - tap-diff
- - devtool
+ - AVA
+ - Node Inspector
  - nodemon
 
 
