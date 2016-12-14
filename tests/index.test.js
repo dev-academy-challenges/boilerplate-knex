@@ -18,7 +18,7 @@ test.beforeEach(function (t) {
     })
 })
 
-// Destroy the in-memory database after each test.
+// Destroy the database connection after each test.
 test.afterEach(function (t) {
   t.context.db.destroy()
 })

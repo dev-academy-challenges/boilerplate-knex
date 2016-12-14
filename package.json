@@ -7,7 +7,7 @@
     "knex": "knex",
     "dev": "nodemon index",
     "start": "node index",
-    "debug": "devtool --watch index ",
+    "debug": "node-debug index ",
     "test": "ava"
   },
   "repository": {
@@ -26,7 +26,7 @@
   "homepage": "https://github.com/dev-academy-challenges/boilerplate-knex#readme",
   "devDependencies": {
     "ava": "^0.17.0",
-    "devtool": "^2.3.0",
+    "node-inspector": "^0.12.8",
     "nodemon": "^1.11.0",
     "sqlite3": "^3.1.8"
   },
