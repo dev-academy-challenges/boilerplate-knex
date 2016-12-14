@@ -1,14 +1,13 @@
 var express = require('express')
-var development = require('../knexfile').development
-var knex = require('knex')(development)
+
+var db = require('./db')
 
 module.exports = {
   get: get
 }
 
 function get (req, res) {
-  knex('users')
-    .select()
+  db.getUsers()
     .then(function (users) {
       res.render('index', { users: users })
     })
