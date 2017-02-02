@@ -1,6 +1,6 @@
 {
   "name": "boilerplate-knex",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Express boilerplate with Knex.js",
   "main": "index.js",
   "scripts": {
@@ -25,14 +25,14 @@
   },
   "homepage": "https://github.com/dev-academy-challenges/boilerplate-knex#readme",
   "devDependencies": {
-    "ava": "^0.17.0",
-    "nodemon": "^1.11.0"
+    "ava": "^0.18.0",
+    "nodemon": "^1.11.0",
+    "sqlite3": "^3.1.8"
   },
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
+    "body-parser": "^1.16.0",
+    "express": "^4.14.1",
     "express-handlebars": "^3.0.0",
-    "knex": "^0.11.10",
-    "sqlite3": "^3.1.8"
+    "knex": "^0.12.6"
   }
 }
