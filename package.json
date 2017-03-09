@@ -6,7 +6,7 @@
   "scripts": {
     "knex": "knex",
     "dev": "nodemon index",
-    "start": "node index",
+    "start": "nodemon index",
     "debug": "node-debug index.js",
     "test": "ava"
   },
