@@ -6,18 +6,17 @@ var hbs = require('express-handlebars')
 
 var index = require('./routes/index')
 
-var server = express()
+var app = express()
 
-module.exports = server
+module.exports = app
 
 // Middleware
 
-server.engine('hbs', hbs({extname: 'hbs'}))
-server.set('view engine', 'hbs')
-server.set('views', path.join(__dirname, 'views'))
-server.use(bodyParser.urlencoded({ extended: true }))
+app.engine('hbs', hbs({extname: 'hbs'}))
+app.set('view engine', 'hbs')
+app.set('views', path.join(__dirname, 'views'))
+app.use(bodyParser.urlencoded({ extended: true }))
 
 // Routes
 
-server.get('/', index.get)
-
+app.use('/', index)
