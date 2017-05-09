@@ -8,8 +8,6 @@ var index = require('./routes/index')
 
 var app = express()
 
-module.exports = app
-
 // Middleware
 
 app.engine('hbs', hbs({extname: 'hbs'}))
@@ -20,3 +18,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // Routes
 
 app.use('/', index)
+
+module.exports = (connection) => {
+  app.set('connection', connection)
+  return app
+}

@@ -4,7 +4,7 @@ var router = express.Router()
 var db = require('../db')
 
 router.get('/', function (req, res) {
-  db.getUsers()
+  db.getUsers(req.app.get('connection'))
     .then(function (users) {
       res.render('index', { users: users })
     })
