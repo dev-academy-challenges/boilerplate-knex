@@ -4,22 +4,19 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var hbs = require('express-handlebars')
 
-var index = require('./routes/index')
+var userRoutes = require('./routes/users')
 
-var app = express()
+var server = express()
 
 // Middleware
 
-app.engine('hbs', hbs({extname: 'hbs'}))
-app.set('view engine', 'hbs')
-app.set('views', path.join(__dirname, 'views'))
-app.use(bodyParser.urlencoded({ extended: true }))
+server.engine('hbs', hbs({extname: 'hbs'}))
+server.set('view engine', 'hbs')
+server.set('views', path.join(__dirname, 'views'))
+server.use(bodyParser.urlencoded({ extended: true }))
 
 // Routes
 
-app.use('/', index)
+server.use('/', userRoutes)
 
-module.exports = (connection) => {
-  app.set('connection', connection)
-  return app
-}
+module.exports = server

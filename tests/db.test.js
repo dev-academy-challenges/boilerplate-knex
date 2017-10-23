@@ -1,29 +1,33 @@
-// Note: we use AVA here because it makes setting up the
-// conditions for each test relatively simple. The same
-// can be done with Tape using a bit more code.
+/* global beforeEach, afterEach, test, expect */
+const testEnv = require('./test-environment')
+const db = require('../db')
 
-var test = require('ava')
+let testDb = null
 
-var configureDatabase = require('./helpers/database-config')
-configureDatabase(test)
-
-var db = require('../db')
-
-test('getUsers gets all users', function (t) {
-  // One for each letter of the alphabet!
-  var expected = 26
-  return db.getUsers(t.context.connection)
-    .then(function (result) {
-      var actual = result.length
-      t.is(expected, actual)
-    })
+beforeEach(() => {
+  testDb = testEnv.getTestDb()
+  return testEnv.initialise(testDb)
 })
 
-test('getUsers gets a single user', function (t) {
-  var expected = 'Ambitious Aardvark'
-  return db.getUser(99901, t.context.connection)
-    .then(function (result) {
-      var actual = result[0].name
-      t.is(expected, actual)
+afterEach(() => testEnv.cleanup(testDb))
+
+test('getUsers gets all users', () => {
+  // One for each letter of the alphabet!
+  var expected = 26
+  return db.getUsers(testDb)
+    .then(users => {
+      var actual = users.length
+      expect(actual).toBe(expected)
     })
+    .catch(err => expect(err).toBeNull())
+})
+
+test('getUser gets a single user', () => {
+  var expected = 'Ambitious Aardvark'
+  return db.getUser(99901, testDb)
+    .then(users => {
+      var actual = users[0].name
+      expect(actual).toBe(expected)
+    })
+    .catch(err => expect(err).toBeNull())
 })
