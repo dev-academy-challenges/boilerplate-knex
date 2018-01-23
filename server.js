@@ -1,18 +1,15 @@
-var path = require('path')
+const express = require('express')
+const bodyParser = require('body-parser')
+const hbs = require('express-handlebars')
 
-var express = require('express')
-var bodyParser = require('body-parser')
-var hbs = require('express-handlebars')
+const userRoutes = require('./routes/users')
 
-var userRoutes = require('./routes/users')
-
-var server = express()
+const server = express()
 
 // Middleware
 
 server.engine('hbs', hbs({extname: 'hbs'}))
 server.set('view engine', 'hbs')
-server.set('views', path.join(__dirname, 'views'))
 server.use(bodyParser.urlencoded({ extended: true }))
 
 // Routes
@@ -20,3 +17,4 @@ server.use(bodyParser.urlencoded({ extended: true }))
 server.use('/', userRoutes)
 
 module.exports = server
+

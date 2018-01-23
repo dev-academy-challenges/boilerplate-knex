@@ -28,6 +28,7 @@ exports.seed = function (knex, Promise) {
         knex('users').insert({id: 99924, name: 'Xenial Xerus', email: 'xerus@example.org'}),
         knex('users').insert({id: 99925, name: 'Yielding Yak', email: 'yak@example.org'}),
         knex('users').insert({id: 99926, name: 'Zaftig Zebu', email: 'zebu@example.org'})
-      ]);
-    });
-};
+      ])
+    })
+}
+

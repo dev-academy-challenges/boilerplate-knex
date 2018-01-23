@@ -13,21 +13,22 @@ afterEach(() => testEnv.cleanup(testDb))
 
 test('getUsers gets all users', () => {
   // One for each letter of the alphabet!
-  var expected = 26
+  const expected = 26
   return db.getUsers(testDb)
     .then(users => {
-      var actual = users.length
+      const actual = users.length
       expect(actual).toBe(expected)
     })
     .catch(err => expect(err).toBeNull())
 })
 
 test('getUser gets a single user', () => {
-  var expected = 'Ambitious Aardvark'
+  const expected = 'Ambitious Aardvark'
   return db.getUser(99901, testDb)
     .then(users => {
-      var actual = users[0].name
+      const actual = users[0].name
       expect(actual).toBe(expected)
     })
     .catch(err => expect(err).toBeNull())
 })
+

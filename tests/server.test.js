@@ -20,7 +20,8 @@ test('GET /', () => {
     .expect(200)
     .then((res) => {
       const $ = cheerio.load(res.text)
-      expect($('li').first().text()).toBe('test user 2 (test2@user.nz)')
+      const firstLiText = $('li').first().text()
+      expect(firstLiText).toBe('test user 2 (test2@user.nz)')
     })
     .catch(err => expect(err).toBeNull())
 })
