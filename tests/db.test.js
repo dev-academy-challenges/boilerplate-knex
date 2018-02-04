@@ -1,4 +1,4 @@
-/* global beforeEach, afterEach, test, expect */
+/* global beforeEach afterEach test expect */
 const testEnv = require('./test-environment')
 const db = require('../db')
 
@@ -25,8 +25,8 @@ test('getUsers gets all users', () => {
 test('getUser gets a single user', () => {
   const expected = 'Ambitious Aardvark'
   return db.getUser(99901, testDb)
-    .then(users => {
-      const actual = users[0].name
+    .then(user => {
+      const actual = user.name
       expect(actual).toBe(expected)
     })
     .catch(err => expect(err).toBeNull())

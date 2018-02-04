@@ -7,7 +7,7 @@
     "knex": "knex",
     "dev": "nodemon index",
     "start": "node index",
-    "test": "jest --watch"
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",
