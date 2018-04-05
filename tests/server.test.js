@@ -1,4 +1,3 @@
-/* global jest test expect */
 const request = require('supertest')
 const cheerio = require('cheerio')
 
@@ -25,4 +24,3 @@ test('GET /', () => {
     })
     .catch(err => expect(err).toBeNull())
 })
-

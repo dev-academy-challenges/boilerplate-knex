@@ -1,4 +1,3 @@
-/* global beforeEach afterEach test expect */
 const testEnv = require('./test-environment')
 const db = require('../db')
 
@@ -31,4 +30,3 @@ test('getUser gets a single user', () => {
     })
     .catch(err => expect(err).toBeNull())
 })
-
