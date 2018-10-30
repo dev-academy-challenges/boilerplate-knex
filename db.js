@@ -7,12 +7,10 @@ module.exports = {
   getUsers: getUsers
 }
 
-function getUsers (testConn) {
-  const conn = testConn || connection
-  return conn('users').select()
+function getUsers (db = connection) {
+  return db('users').select()
 }
 
-function getUser (id, testConn) {
-  const conn = testConn || connection
-  return conn('users').where('id', id).first()
+function getUser (id, db = connection) {
+  return db('users').where('id', id).first()
 }
