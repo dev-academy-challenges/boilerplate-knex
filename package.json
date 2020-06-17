@@ -4,9 +4,9 @@
   "description": "Express boilerplate with Knex.js",
   "main": "index.js",
   "scripts": {
-    "knex": "knex",
-    "dev": "nodemon index",
     "start": "node index",
+    "dev": "nodemon index",
+    "knex": "knex",
     "test": "jest"
   },
   "repository": {
