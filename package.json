@@ -28,6 +28,8 @@
   },
   "devDependencies": {
     "cheerio": "1.0.0-rc.3",
+    "eslint": "^7.12.1",
+    "eslint-config-eda": "^0.1.4",
     "jest": "^25.1",
     "supertest": "^4.0.2"
   }
