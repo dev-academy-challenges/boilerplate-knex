@@ -7,7 +7,9 @@
     "start": "node index",
     "dev": "nodemon index",
     "knex": "knex",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
