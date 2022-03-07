@@ -33,12 +33,16 @@
     "nodemon": "^2.0.2"
   },
   "devDependencies": {
-    "cheerio": "1.0.0-rc.3",
+    "@testing-library/dom": "^8.11.3",
+    "@testing-library/jest-dom": "^5.16.2",
     "eslint": "^8.10.0",
     "eslint-config-eda": "^1.0.0",
-    "jest": "^25.1",
+    "jest": "^27.5.1",
     "prettier": "^2.5.1",
     "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   },
   "eslintConfig": {
     "extends": "eda",
