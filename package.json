@@ -41,7 +41,10 @@
     "supertest": "^4.0.2"
   },
   "eslintConfig": {
-    "extends": "eda"
+    "extends": "eda",
+    "rules": {
+      "promise/always-return": 0
+    }
   },
   "prettier": {
     "semi": false,
