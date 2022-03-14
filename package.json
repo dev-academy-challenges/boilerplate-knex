@@ -13,6 +13,7 @@
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "format": "prettier -w *.js routes seeds migrations",
     "build": "knex migrate:latest"
   },
   "repository": {
