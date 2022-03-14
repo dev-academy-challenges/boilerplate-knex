@@ -4,7 +4,7 @@
   "description": "Express boilerplate with Knex.js",
   "engines": {
     "node": "14.x"
-},
+  },
   "main": "index.js",
   "scripts": {
     "start": "node index",
@@ -26,17 +26,30 @@
   },
   "homepage": "https://github.com/dev-academy-challenges/boilerplate-knex#readme",
   "dependencies": {
+    "@vscode/sqlite3": "^5.0.7",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "knex": "^1.0.1",
-    "@vscode/sqlite3": "^5.0.7",
     "nodemon": "^2.0.2"
   },
   "devDependencies": {
     "cheerio": "1.0.0-rc.3",
-    "eslint": "^7.12.1",
-    "eslint-config-eda": "^0.1.4",
+    "eslint": "^8.11.0",
+    "eslint-config-eda": "^1.1.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^26.1.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.29.4",
     "jest": "^25.1",
+    "prettier": "^2.5.1",
     "supertest": "^4.0.2"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "extends": "eda"
   }
 }
