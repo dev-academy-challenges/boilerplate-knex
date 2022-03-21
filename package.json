@@ -13,6 +13,7 @@
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "format": "prettier -w *.js routes seeds migrations",
     "build": "knex migrate:latest"
   },
   "repository": {
@@ -35,23 +36,25 @@
   "devDependencies": {
     "@testing-library/dom": "^8.11.3",
     "@testing-library/jest-dom": "^5.16.2",
-    "eslint": "^8.10.0",
-    "eslint-config-eda": "^1.0.0",
-    "jest": "^27.5.1",
+    "eslint": "^8.11.0",
+    "eslint-config-eda": "^1.1.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^26.1.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "jest": "^25.1",
     "prettier": "^2.5.1",
     "supertest": "^4.0.2"
   },
-  "jest": {
-    "testEnvironment": "jsdom"
-  },
   "eslintConfig": {
-    "extends": "eda",
-    "rules": {
-      "promise/always-return": 0
-    }
+    "extends": "eda"
   },
   "prettier": {
     "semi": false,
     "singleQuote": true
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   }
 }

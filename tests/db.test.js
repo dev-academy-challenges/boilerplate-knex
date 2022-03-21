@@ -1,6 +1,6 @@
+/* eslint-disable jest/no-conditional-expect */
 const testEnv = require('./test-environment')
 const db = require('../db')
-/* eslint-disable jest/no-conditional-expect */
 
 let testDb = null
 

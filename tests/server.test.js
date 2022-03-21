@@ -1,3 +1,4 @@
+/* eslint-disable jest/no-conditional-expect */
 const request = require('supertest')
 const { screen } = require('@testing-library/dom')
 require('@testing-library/jest-dom')
