@@ -1,6 +1,8 @@
 /* eslint-disable jest/no-conditional-expect */
 const request = require('supertest')
-const cheerio = require('cheerio')
+const { screen } = require('@testing-library/dom')
+require('@testing-library/jest-dom')
+/* eslint-disable jest/no-conditional-expect */
 
 jest.mock('../db', () => ({
   getUser: (id) =>
@@ -19,9 +21,9 @@ test('GET /', () => {
     .get('/')
     .expect(200)
     .then((res) => {
-      const $ = cheerio.load(res.text)
-      const firstLiText = $('li').first().text()
-      expect(firstLiText).toBe('test user 2 (test2@user.nz)')
+      document.body.innerHTML = res.text
+      const firstLiText = screen.getByText('test user 2 (test2@user.nz)')
+      expect(firstLiText).toBeInTheDocument()
     })
     .catch((err) => expect(err).toBeNull())
 })

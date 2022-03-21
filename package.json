@@ -3,7 +3,7 @@
   "version": "0.1.4",
   "description": "Express boilerplate with Knex.js",
   "engines": {
-    "node": "14.x"
+    "node": "16.x"
   },
   "main": "index.js",
   "scripts": {
@@ -29,12 +29,13 @@
   "dependencies": {
     "@vscode/sqlite3": "^5.0.7",
     "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
+    "express-handlebars": "^6.0.3",
     "knex": "^1.0.1",
     "nodemon": "^2.0.2"
   },
   "devDependencies": {
-    "cheerio": "1.0.0-rc.3",
+    "@testing-library/dom": "^8.11.3",
+    "@testing-library/jest-dom": "^5.16.2",
     "eslint": "^8.11.0",
     "eslint-config-eda": "^1.1.0",
     "eslint-plugin-import": "^2.25.4",
@@ -46,11 +47,14 @@
     "prettier": "^2.5.1",
     "supertest": "^4.0.2"
   },
+  "eslintConfig": {
+    "extends": "eda"
+  },
   "prettier": {
     "semi": false,
     "singleQuote": true
   },
-  "eslintConfig": {
-    "extends": "eda"
+  "jest": {
+    "testEnvironment": "jsdom"
   }
 }
